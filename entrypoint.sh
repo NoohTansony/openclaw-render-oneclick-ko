@@ -22,13 +22,14 @@ cat > /root/.openclaw/openclaw.json <<EOF
     "telegram": {
       "enabled": ${TG_ENABLED},
       "dmPolicy": "open",
+      "allowFrom": ["*"],
       "groupPolicy": "open",
       "botToken": "${TG_TOKEN}"
     }
   },
   "gateway": {
     "mode": "local",
-    "bind": "0.0.0.0",
+    "bind": "lan",
     "port": ${PORT},
     "auth": {
       "mode": "token",
